@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="P1">
+
+<head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-resource.min.js"></script>
+    <script src="/js/Calculation.js"></script>
+
+</head>
+
+<body>
+
+    <!-- the root element of the view assigned to the Calculation javascript controller-->
+    <div class="container" ng-controller="Calculation">
+        <center>
+            <h1>Program 1</h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form class="input-group" ng-submit="getResult()">
+                        Enter N:<br>
+                        <input type="text" class="form-control" placeholder="Enter N" ng-model="n"><br><br>
+                        Enter p:<br>
+                        <input type="text" class="form-control" placeholder="Enter p" ng-model="p"><br><br>
+                        Enter q:<br>
+                        <input type="text" class="form-control" placeholder="Enter q" ng-model="q"><br>
+                        <br><br>
+                        <button class="btn btn-default" type="submit">Get Result</button>
+
+                    </form>
+                    <h1>Result:</h1>
+                    <div style="word-wrap: break-word;">
+                        {{finalResult}}
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
